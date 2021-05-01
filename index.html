@@ -5,13 +5,184 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Application</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Krona+One&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-  <body>
+  <body class="bg-warning">
     <!-- need a header displaying the title -->
-    <header id="headerSection"></header>
+    <header id="headerSection">
+      <div class="jumbotron jumbotron-fluid bg-primary text-white">
+        <div class="container">
+          <h1 class="display-4 ">Weather Dashboard</h1>
+        </br>
+          <p class="lead">
+            Enter a location on the search box to see the weather below:
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="row justify-content-center">
+          <div class="col-sm-10">
+            <h3 id="customFormHeader">Search for a City</h3>
+            <input
+              type="area"
+              class="form-control"
+              id="inputPassword2"
+              placeholder="Enter City"
+            />
+          </div>
+          <div class="col-sm-10 mt-3">
+            <button type="submit" class="btn btn-primary mb-2 w-100">
+              Search
+            </button>
+            <hr class="border border-dark" />
+          </div>
+
+          <div class="col-sm-10">
+            <button class="w-100 mb-2">Colorado Springs</button>
+
+            <button class="w-100 mb-2">Colorado Springs</button>
+
+            <button class="w-100 mb-2">Colorado Springs</button>
+
+            <button class="w-100 mb-2">Colorado Springs</button>
+
+            <button class="w-100 mb-2">Colorado Springs</button>
+          </div>
+        </div>
+
+        <!-- <section id="formSection">
+          <form>
+            <div class="form-group mb-2"></div>
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="inputPassword2" class="sr-only">Information</label>
+            </div>
+          </form>
+        </section> -->
+      </div>
+      <div class="col-sm-8">
+        <div class="jumbotron border bg-secondary border-dark text-white ">
+          <h2>
+            Colorado Springs (4/30/2021)
+            <img src="http://openweathermap.org/img/w/01d.png" alt="" />
+          </h2>
+          <div class="main-card-info">
+            <article>temp:60</article>
+            <article>wind:50mph</article>
+            <article>humidity:100</article>
+            <article>UV index:1</article>
+          </div>
+        </div>
+
+        <h4>Five Day Forecast:</h4>
+        <div class="card-deck">
+          <div class="card border-dark bg-secondary">
+            
+            <div class="card-body text-white">
+              <h5 class="card-title">5/1/2021</h5>
+              <img src="http://openweathermap.org/img/w/01d.png" class="card-img-top" alt="..." />
+              <p class="card-text">
+                <div>temp:74</div>
+                <br>
+                <div>Wind 9 Mph</div>
+                <br>
+                <div>Humidity</div>
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+          <div class="card border-dark bg-secondary">
+            
+            <div class="card-body text-white">
+              <h5 class="card-title">5/1/2021</h5>
+              <img src="http://openweathermap.org/img/w/01d.png" class="card-img-top" alt="..." />
+             <p class="card-text">
+                <div>temp:74</div>
+                <br>
+                <div>Wind 9 Mph</div>
+                <br>
+                <div>Humidity</div>
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+          <div class="card border-dark bg-secondary">          
+            <div class="card-body text-white">
+              <h5 class="card-title">5/1/2021</h5>
+              <img src="http://openweathermap.org/img/w/01d.png" class="card-img-top" alt="..." />
+            <p class="card-text">
+                <div>temp:74</div>
+                <br>
+                <div>Wind 9 Mph</div>
+                <br>
+                <div>Humidity</div>
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+          <div class="card border-dark bg-secondary">        
+            <div class="card-body text-white">
+              <h5 class="card-title">5/1/2021</h5>
+              <img src="http://openweathermap.org/img/w/01d.png" class="card-img-top" alt="..." />
+             <p class="card-text">
+                <div>temp:74</div>
+                <br>
+                <div>Wind 9 Mph</div>
+                <br>
+                <div>Humidity</div>
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+          <div class="card border-dark bg-secondary">   
+            <div class="card-body text-white">
+              <h5 class="card-title">5/1/2021</h5>
+               <img src="http://openweathermap.org/img/w/01d.png" class="card-img-top" alt="..." />
+              <p class="card-text">
+                <div>temp:74</div>
+                <br>
+                <div>Wind 9 Mph</div>
+                <br>
+                <div>Humidity</div>
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- need a drop down window providing -->
 
     <footer id="footerSection"></footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+      integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
