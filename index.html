@@ -39,12 +39,12 @@
             <input
               type="area"
               class="form-control"
-              id="inputPassword2"
+              id="cityName"
               placeholder="Enter City"
             />
           </div>
           <div class="col-sm-10 mt-3">
-            <button type="submit" class="btn btn-primary mb-2 w-100">
+            <button   id = "searchBtn" class="btn btn-primary mb-2 w-100">
               Search
             </button>
             <hr class="border border-dark" />
@@ -73,17 +73,9 @@
         </section> -->
       </div>
       <div class="col-sm-8">
-        <div class="jumbotron border bg-secondary border-dark text-white ">
-          <h2>
-            Colorado Springs (4/30/2021)
-            <img src="http://openweathermap.org/img/w/01d.png" alt="" />
-          </h2>
-          <div class="main-card-info">
-            <article>temp:60</article>
-            <article>wind:50mph</article>
-            <article>humidity:100</article>
-            <article>UV index:1</article>
-          </div>
+        <div class="main-weather  jumbotron border bg-secondary border-dark text-white ">
+         
+    
         </div>
 
         <h4>Five Day Forecast:</h4>
@@ -177,6 +169,7 @@
     <!-- need a drop down window providing -->
 
     <footer id="footerSection"></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script
@@ -184,5 +177,6 @@
       integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
