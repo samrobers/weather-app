@@ -6,6 +6,7 @@ var cityName = document.querySelector("#cityName");
 var searchBtn = document.querySelector("#searchBtn");
 var mainCard = document.querySelector(".main-weather");
 var weatherKey = "741a923767f4a3255ecec817ac51aa4b";
+var fiveCard = document.querySelector("#card-deck");
 
 searchBtn.addEventListener("click", searchWeather);
 
@@ -43,8 +44,99 @@ function searchWeather() {
             <article>humidity:${currentWeatherData.main.humidity}</article>
             <article>UV index:${uvData.current.uvi}</article>
           </div>
-    
       `;
+        })
+        .then(function futureWeather() {
+          var futureUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName.value}&appid=${weatherKey}&units=imperial`;
+          fetch(futureUrl)
+            .then(function (response) {
+              return response.json();
+            })
+            .then(function (futureData) {
+              console.log(futureData);
+              fiveCard.innerHTML = ` <div class="card border-dark bg-secondary">
+            
+            <div class="card-body text-white">
+              <h5 class="card-title">5/1/2021</h5>
+              <img src="http://openweathermap.org/img/w/01d.png" class="card-img-top" alt="..." />
+              <p class="card-text">
+                <div>temp:74</div>
+                <br>
+                <div>Wind 9 Mph</div>
+                <br>
+                <div>Humidity</div>
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+          <div class="card border-dark bg-secondary">
+            
+            <div class="card-body text-white">
+              <h5 class="card-title">5/1/2021</h5>
+              <img src="http://openweathermap.org/img/w/01d.png" class="card-img-top" alt="..." />
+             <p class="card-text">
+                <div>temp:74</div>
+                <br>
+                <div>Wind 9 Mph</div>
+                <br>
+                <div>Humidity</div>
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+          <div class="card border-dark bg-secondary">          
+            <div class="card-body text-white">
+              <h5 class="card-title">5/1/2021</h5>
+              <img src="http://openweathermap.org/img/w/01d.png" class="card-img-top" alt="..." />
+            <p class="card-text">
+                <div>temp:74</div>
+                <br>
+                <div>Wind 9 Mph</div>
+                <br>
+                <div>Humidity</div>
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+          <div class="card border-dark bg-secondary">        
+            <div class="card-body text-white">
+              <h5 class="card-title">5/1/2021</h5>
+              <img src="http://openweathermap.org/img/w/01d.png" class="card-img-top" alt="..." />
+             <p class="card-text">
+                <div>temp:74</div>
+                <br>
+                <div>Wind 9 Mph</div>
+                <br>
+                <div>Humidity</div>
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+          <div class="card border-dark bg-secondary">   
+            <div class="card-body text-white">
+              <h5 class="card-title">5/1/2021</h5>
+               <img src="http://openweathermap.org/img/w/01d.png" class="card-img-top" alt="..." />
+              <p class="card-text">
+                <div>temp:74</div>
+                <br>
+                <div>Wind 9 Mph</div>
+                <br>
+                <div>Humidity</div>
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>`;
+            });
         });
     });
 }
@@ -58,3 +150,13 @@ function searchWeather() {
 //need the weather of the searched area to display a 5 day forecast under the today forecast maybe with cards, not statically? or statically?
 
 //need all of the previous searches to display under the search bar as buttons to be pressed
+//  .then(function futureWeather() {
+//         var futureUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName.value}&appid=${weatherKey}&units=imperial`;
+//         fetch(futureUrl)
+//           .then(function (response) {
+//             return response.json();
+//           })
+//           .then(function (futureData) {
+//             console.log(futureData);
+//           });
+//       })
