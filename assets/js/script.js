@@ -6,7 +6,7 @@ var cityName = document.querySelector("#cityName");
 var searchBtn = document.querySelector("#searchBtn");
 var mainCard = document.querySelector(".main-weather");
 var weatherKey = "741a923767f4a3255ecec817ac51aa4b";
-var fiveCard = document.querySelector("#card-deck");
+var fiveCard = document.querySelector(".card-deck");
 
 searchBtn.addEventListener("click", searchWeather);
 
@@ -54,17 +54,18 @@ function searchWeather() {
             })
             .then(function (futureData) {
               console.log(futureData);
-              fiveCard.innerHTML = ` <div class="card border-dark bg-secondary">
-            
+              fiveCard.innerHTML = ` 
+              <h4>Five Day Forecast:</h4>
+              <div class="card border-dark bg-secondary">
             <div class="card-body text-white">
-              <h5 class="card-title">5/1/2021</h5>
+              <h5 class="card-title">${futureData.list[0].dt}</h5>
               <img src="http://openweathermap.org/img/w/01d.png" class="card-img-top" alt="..." />
               <p class="card-text">
-                <div>temp:74</div>
+                <div>temp:${futureData.list[0].main.temp}</div>
                 <br>
-                <div>Wind 9 Mph</div>
+                <div>Wind:${futureData.list[0].wind.speed}</div>
                 <br>
-                <div>Humidity</div>
+                <div>Humidity:${futureData.list[0].main.humidity}</div>
               </p>
               <p class="card-text">
                 <small class="text-muted">Last updated 3 mins ago</small>
@@ -74,14 +75,14 @@ function searchWeather() {
           <div class="card border-dark bg-secondary">
             
             <div class="card-body text-white">
-              <h5 class="card-title">5/1/2021</h5>
+              <h5 class="card-title">${futureData.list[1].dt}</h5>
               <img src="http://openweathermap.org/img/w/01d.png" class="card-img-top" alt="..." />
              <p class="card-text">
-                <div>temp:74</div>
+                <div>temp:${futureData.list[1].main.temp}</div>
                 <br>
-                <div>Wind 9 Mph</div>
+                <div>Wind:${futureData.list[1].wind.speed}</div>
                 <br>
-                <div>Humidity</div>
+                <div>Humidity:${futureData.list[1].main.humidity}</div>
               </p>
               <p class="card-text">
                 <small class="text-muted">Last updated 3 mins ago</small>
@@ -90,14 +91,14 @@ function searchWeather() {
           </div>
           <div class="card border-dark bg-secondary">          
             <div class="card-body text-white">
-              <h5 class="card-title">5/1/2021</h5>
+              <h5 class="card-title">${futureData.list[2].dt}</h5>
               <img src="http://openweathermap.org/img/w/01d.png" class="card-img-top" alt="..." />
             <p class="card-text">
-                <div>temp:74</div>
+                <div>temp:${futureData.list[2].main.temp}</div>
                 <br>
-                <div>Wind 9 Mph</div>
+                <div>Wind:${futureData.list[2].wind.speed}</div>
                 <br>
-                <div>Humidity</div>
+                <div>Humidity:${futureData.list[2].main.humidity}</div>
               </p>
               <p class="card-text">
                 <small class="text-muted">Last updated 3 mins ago</small>
@@ -106,14 +107,14 @@ function searchWeather() {
           </div>
           <div class="card border-dark bg-secondary">        
             <div class="card-body text-white">
-              <h5 class="card-title">5/1/2021</h5>
+              <h5 class="card-title">${futureData.list[3].dt}</h5>
               <img src="http://openweathermap.org/img/w/01d.png" class="card-img-top" alt="..." />
              <p class="card-text">
-                <div>temp:74</div>
+                <div>temp:${futureData.list[3].main.temp}</div>
                 <br>
-                <div>Wind 9 Mph</div>
+                <div>Wind:${futureData.list[3].wind.speed}</div>
                 <br>
-                <div>Humidity</div>
+                <div>Humidity:${futureData.list[3].main.humidity}</div>
               </p>
               <p class="card-text">
                 <small class="text-muted">Last updated 3 mins ago</small>
@@ -122,14 +123,14 @@ function searchWeather() {
           </div>
           <div class="card border-dark bg-secondary">   
             <div class="card-body text-white">
-              <h5 class="card-title">5/1/2021</h5>
+              <h5 class="card-title">${futureData.list[4].dt}</h5>
                <img src="http://openweathermap.org/img/w/01d.png" class="card-img-top" alt="..." />
               <p class="card-text">
-                <div>temp:74</div>
+                <div>temp:${futureData.list[4].main.temp}</div>
                 <br>
-                <div>Wind 9 Mph</div>
+                <div>Wind:${futureData.list[4].wind.speed}</div>
                 <br>
-                <div>Humidity</div>
+                <div>Humidity:${futureData.list[4].main.humidity}</div>
               </p>
               <p class="card-text">
                 <small class="text-muted">Last updated 3 mins ago</small>
